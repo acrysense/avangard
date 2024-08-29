@@ -2154,6 +2154,11 @@ svg {
     padding-top: 14px;
   }
 }
+@media screen and (max-width: 767px) {
+  .projects-card__group:first-child {
+    max-width: 132px;
+  }
+}
 .projects-card__group + .projects-card__group {
   margin-left: 82px;
 }
