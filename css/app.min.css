@@ -1869,6 +1869,7 @@ svg {
 .projects__slider {
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 @media screen and (min-width: 1200px) {
   .projects__slider {
@@ -1898,7 +1899,7 @@ svg {
 .projects__slider .swiper-controls {
   position: absolute;
   left: calc(50% + 260px);
-  bottom: 0;
+  bottom: -1px;
   z-index: 10;
   -webkit-transform: translate(-50%, 0);
       -ms-transform: translate(-50%, 0);
@@ -1912,8 +1913,8 @@ svg {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  width: 139px;
-  height: 100px;
+  width: 140px;
+  height: 101px;
   background: #3C3C3B;
   -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
           clip-path: polygon(100% 0, 0% 100%, 100% 100%);
@@ -1928,7 +1929,7 @@ svg {
 }
 @media screen and (max-width: 1199px) {
   .projects__slider .swiper-controls {
-    right: 0;
+    right: -1px;
     left: auto;
     -webkit-transform: none;
         -ms-transform: none;
@@ -2164,6 +2165,9 @@ svg {
 @media screen and (max-width: 767px) {
   .projects-card__group + .projects-card__group {
     margin-left: 40px;
+  }
+  .projects-card__group + .projects-card__group:last-child {
+    max-width: 155px;
   }
 }
 .projects-card__value {
@@ -2617,7 +2621,7 @@ svg {
 .articles__slider .swiper-controls {
   position: absolute;
   left: 660px;
-  bottom: 0;
+  bottom: -1px;
   z-index: 10;
   -webkit-transform: translate(-100%, 0);
       -ms-transform: translate(-100%, 0);

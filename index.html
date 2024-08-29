@@ -21,6 +21,15 @@
 	<!-- styles -->
 	<link rel="stylesheet" href="css/vendor.min.css">
 	<link rel="stylesheet" href="css/app.min.css">
+	<!-- scripts -->
+	<script>
+		// on page load or when changing themes, best to add inline in `head` to avoid FOUC
+		if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			document.documentElement.classList.add('dark')
+		} else {
+			document.documentElement.classList.remove('dark')
+		}
+	</script>
 </head>
 
 <body>
@@ -552,6 +561,21 @@
 					<div class="articles__slider">
 						<div class="swiper">
 							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#" class="articles-card articles__slide" style="background-image: url(img/articles-01.jpg);">
+										<span class="articles-card__title">Обеспечение Экономического и гуманитарного форума Россия-Африка — 2024</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="articles-card articles__slide" style="background-image: url(img/articles-02.jpg);">
+										<span class="articles-card__title">Новые технологии в работе для эффективной работы</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="articles-card articles__slide" style="background-image: url(img/articles-03.jpg);">
+										<span class="articles-card__title">Комплексная организация мероприятия</span>
+									</a>
+								</div>
 								<div class="swiper-slide">
 									<a href="#" class="articles-card articles__slide" style="background-image: url(img/articles-01.jpg);">
 										<span class="articles-card__title">Обеспечение Экономического и гуманитарного форума Россия-Африка — 2024</span>
