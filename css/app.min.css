@@ -2776,8 +2776,8 @@ svg {
   -webkit-filter: blur(50px);
           filter: blur(50px);
   opacity: 0;
-  -webkit-animation: fadeInOut 5s infinite ease-in-out;
-          animation: fadeInOut 5s infinite ease-in-out;
+  -webkit-animation: fadeInOutTransform 5s infinite ease-in-out;
+          animation: fadeInOutTransform 5s infinite ease-in-out;
 }
 .about__img img {
   display: block;
@@ -3230,9 +3230,40 @@ svg {
 }
 
 .documents {
+  position: relative;
+  z-index: 1;
   overflow: hidden;
   padding: 40px 0;
   background: #F8F8F8;
+}
+.documents::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  right: calc((100vw - 1430px) / 2 - 145px);
+  z-index: -1;
+  display: block;
+  width: 289px;
+  height: 289px;
+  background: rgba(221, 115, 54, 0.2);
+  border-radius: 50%;
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
+  opacity: 0;
+  -webkit-animation: fadeInOut 5s infinite ease-in-out;
+          animation: fadeInOut 5s infinite ease-in-out;
+}
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+  .documents::before {
+    top: -91px;
+    right: -110px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .documents::before {
+    top: -91px;
+    right: -208px;
+  }
 }
 .documents__slider {
   position: relative;
@@ -3555,6 +3586,31 @@ svg {
 @-webkit-keyframes fadeInOut {
   0%, 100% {
     opacity: 0;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes fadeInOutTransform {
+  0%, 100% {
+    opacity: 0;
     -webkit-transform: translate(-50%, 0) scale(0.8);
             transform: translate(-50%, 0) scale(0.8);
   }
@@ -3564,8 +3620,7 @@ svg {
             transform: translate(-50%, 0) scale(1);
   }
 }
-
-@keyframes fadeInOut {
+@keyframes fadeInOutTransform {
   0%, 100% {
     opacity: 0;
     -webkit-transform: translate(-50%, 0) scale(0.8);
