@@ -1993,7 +1993,7 @@ svg {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 420px;
+  font-size: 220px;
   font-weight: bold;
   line-height: 1;
   color: #297ABD;
@@ -3110,16 +3110,16 @@ svg {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-@media screen and (min-width: 375px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .articles__slider .swiper-slide {
     min-width: 340px;
     width: 340px;
   }
 }
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 767px) {
   .articles__slider .swiper-slide {
-    min-width: 300px;
-    width: 300px;
+    min-width: auto;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -3162,14 +3162,13 @@ svg {
     left: 521px;
   }
 }
-@media screen and (min-width: 375px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .articles__slider .swiper-controls {
-    left: 341px;
-  }
-}
-@media screen and (max-width: 374px) {
-  .articles__slider .swiper-controls {
-    left: 301px;
+    right: -1px;
+    left: auto;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 }
 .articles__slider .swiper-button-prev,
@@ -3308,16 +3307,16 @@ svg {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-@media screen and (min-width: 375px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .article__slider .swiper-slide {
     min-width: 340px;
     width: 340px;
   }
 }
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 767px) {
   .article__slider .swiper-slide {
-    min-width: 300px;
-    width: 300px;
+    min-width: auto;
+    width: 100%;
   }
 }
 .article__slider .swiper-slide-active .article__slide-img {
@@ -3363,14 +3362,13 @@ svg {
     left: 521px;
   }
 }
-@media screen and (min-width: 375px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .article__slider .swiper-controls {
-    left: 341px;
-  }
-}
-@media screen and (max-width: 374px) {
-  .article__slider .swiper-controls {
-    left: 301px;
+    right: -1px;
+    left: auto;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 }
 .article__slider .swiper-button-prev,
