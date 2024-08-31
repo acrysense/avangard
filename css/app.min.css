@@ -1993,10 +1993,26 @@ svg {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 220px;
+  font-size: 420px;
   font-weight: bold;
   line-height: 1;
   color: #297ABD;
+}
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .main__number {
+    font-size: 300px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main__number {
+    font-size: 240px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main__number {
+    bottom: -30px;
+    font-size: 140px;
+  }
 }
 
 .services {
