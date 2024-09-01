@@ -522,6 +522,9 @@ svg {
     color: #297ABD;
   }
 }
+.tabs__select {
+  margin-bottom: 20px;
+}
 @media screen and (min-width: 768px) {
   .tabs__select {
     display: none;
@@ -1151,6 +1154,109 @@ svg {
   width: fit-content;
 }
 
+.dark body {
+  color: #FFFFFF;
+  background: #181818;
+}
+.dark .tabs__item.is--active .tabs__tab {
+  color: #297ABD;
+}
+.dark .tabs__tab {
+  color: #FFFFFF;
+}
+.dark .tabs__tab:hover {
+  color: #FFFFFF;
+}
+@media screen and (hover: hover) {
+  .dark .tabs__tab:hover {
+    color: #297ABD;
+  }
+}
+.dark .content ul:not([class]) ul li::before {
+  background: #FFFFFF;
+}
+.dark .content-block {
+  background: #3C3C3B;
+}
+.dark .main__slider .swiper-pagination-bullet {
+  background: #FFFFFF;
+}
+.dark .main__slider .swiper-pagination-bullet-active {
+  background: #DD7336;
+}
+.dark .about__more {
+  color: #FFFFFF;
+}
+.dark .about__more:hover {
+  color: #FFFFFF;
+}
+@media screen and (hover: hover) {
+  .dark .about__more:hover {
+    color: #297ABD;
+  }
+}
+.dark .about__status {
+  color: #3C3C3B;
+  background: #FFFFFF;
+}
+.dark .about__img .light {
+  opacity: 0;
+}
+.dark .about__img .dark {
+  opacity: 1;
+}
+.dark .articles {
+  background: #3C3C3B;
+}
+.dark .articles__slider .swiper-controls {
+  background: #3C3C3B;
+}
+.dark .articles__slider .swiper-button-icon {
+  color: #FFFFFF;
+}
+.dark .article__slider .swiper-controls {
+  background: #181818;
+}
+.dark .article__slider .swiper-button-icon {
+  color: #FFFFFF;
+}
+.dark .services--bg {
+  background: #3C3C3B;
+}
+.dark .documents {
+  background: #3C3C3B;
+}
+.dark .documents-card {
+  color: #FFFFFF;
+}
+.dark .documents-card:hover {
+  color: #FFFFFF;
+}
+@media screen and (hover: hover) {
+  .dark .documents-card:hover {
+    color: #297ABD;
+  }
+}
+@media screen and (max-width: 1399px) {
+  .dark .feedback__wrap {
+    background: #3C3C3B;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .dark .feedback__wrapper {
+    background: #3C3C3B;
+  }
+}
+.dark .footer {
+  background: #181818;
+}
+.dark .footer__top {
+  border-color: #3C3C3B;
+}
+.dark .footer__bottom {
+  border-color: #3C3C3B;
+}
+
 .scroll-disabled {
   overflow: hidden;
 }
@@ -1717,14 +1823,20 @@ svg {
   .main {
     margin-top: -46px;
   }
+  .main--services .main__wrap::after {
+    height: calc(100% - 60px);
+  }
+  .main--services .main__wrap-inner {
+    padding-bottom: 130px;
+  }
+  .main--services .main__bg {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, calc(50% + 80px) 100%, calc(50% + 40px) calc(100% - 60px), 0 calc(100% - 60px));
+            clip-path: polygon(0 0, 100% 0, 100% 100%, calc(50% + 80px) 100%, calc(50% + 40px) calc(100% - 60px), 0 calc(100% - 60px));
+  }
 }
 .main__slider {
   position: relative;
   z-index: 1;
-}
-.main__slider .main__wrap {
-  -webkit-clip-path: none;
-          clip-path: none;
 }
 @media screen and (max-width: 767px) {
   .main__slider .main__wrap::after {
@@ -1734,6 +1846,16 @@ svg {
 @media screen and (max-width: 767px) {
   .main__slider .main__wrap-inner {
     padding-bottom: 130px;
+  }
+}
+.main__slider .main__bg {
+  -webkit-clip-path: none;
+          clip-path: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main__slider .main__bg {
+    -webkit-clip-path: none;
+            clip-path: none;
   }
 }
 .main__slider .swiper {
@@ -1818,25 +1940,6 @@ svg {
   z-index: 1;
   overflow: hidden;
   color: #FFFFFF;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, calc(50% - 97px) calc(100% - 102px), 0 calc(100% - 102px));
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, calc(50% - 97px) calc(100% - 102px), 0 calc(100% - 102px));
-}
-.main__wrap::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -2;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7)));
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%);
 }
 .main__wrap::after {
   content: "";
@@ -1857,20 +1960,12 @@ svg {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .main__wrap {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 65% 100%, calc(65% - 80px) calc(100% - 66px), 0 calc(100% - 66px));
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 65% 100%, calc(65% - 80px) calc(100% - 66px), 0 calc(100% - 66px));
-  }
   .main__wrap::after {
     width: 75%;
     height: calc(100% - 66px);
   }
 }
 @media screen and (max-width: 767px) {
-  .main__wrap {
-    -webkit-clip-path: none;
-            clip-path: none;
-  }
   .main__wrap::after {
     width: 100%;
     height: 100%;
@@ -1880,7 +1975,7 @@ svg {
 }
 .main__wrap-inner {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1946,6 +2041,7 @@ svg {
   width: fit-content;
   font-size: 60px;
   font-weight: bold;
+  line-height: 1.1;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .main__title {
@@ -1986,7 +2082,7 @@ svg {
 }
 .main__number {
   position: absolute;
-  bottom: 0;
+  bottom: -85px;
   left: 0;
   z-index: -1;
   display: block;
@@ -1997,21 +2093,71 @@ svg {
   font-weight: bold;
   line-height: 1;
   color: #297ABD;
+  pointer-events: none;
 }
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
   .main__number {
+    bottom: -61px;
     font-size: 300px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .main__number {
+    bottom: -48px;
     font-size: 240px;
   }
 }
 @media screen and (max-width: 767px) {
   .main__number {
-    bottom: -30px;
-    font-size: 140px;
+    bottom: -28px;
+    font-size: 147px;
+  }
+}
+.main__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, calc(50% - 97px) calc(100% - 102px), 0 calc(100% - 102px));
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, calc(50% - 97px) calc(100% - 102px), 0 calc(100% - 102px));
+  pointer-events: none;
+}
+.main__bg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main__bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7)));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main__bg {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 65% 100%, calc(65% - 80px) calc(100% - 66px), 0 calc(100% - 66px));
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 65% 100%, calc(65% - 80px) calc(100% - 66px), 0 calc(100% - 66px));
+  }
+}
+@media screen and (max-width: 767px) {
+  .main__bg {
+    -webkit-clip-path: none;
+            clip-path: none;
   }
 }
 
@@ -3045,11 +3191,21 @@ svg {
           animation: fadeInOutTransform 5s infinite ease-in-out;
 }
 .about__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.about__img .dark {
+  opacity: 0;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .about__img {
@@ -3502,6 +3658,11 @@ svg {
 @media screen and (max-width: 1023px) {
   .article__wrapper + .article__slider, .article__wrapper + .article__wrapper, .article__slider + .article__wrapper, .article__slider + .article__slider {
     margin-top: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .article__wrapper ~ .article__wrapper::before {
+    display: none;
   }
 }
 .article__left {
