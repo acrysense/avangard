@@ -1842,6 +1842,9 @@ svg {
   position: relative;
   z-index: 1;
 }
+.main__slider .main__wrap {
+  height: 100%;
+}
 @media screen and (max-width: 767px) {
   .main__slider .main__wrap::after {
     height: calc(100% - 66px);
@@ -1877,6 +1880,9 @@ svg {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, calc(50% + 34px) 100%, 50% calc(100% - 38px), 0 calc(100% - 38px));
             clip-path: polygon(0 0, 100% 0, 100% 100%, calc(50% + 34px) 100%, 50% calc(100% - 38px), 0 calc(100% - 38px));
   }
+}
+.main__slider .swiper-slide {
+  height: auto;
 }
 .main__slider .swiper-pagination {
   position: absolute;

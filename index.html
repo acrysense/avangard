@@ -21,22 +21,11 @@
 	<!-- styles -->
 	<link rel="stylesheet" href="css/vendor.min.css">
 	<link rel="stylesheet" href="css/app.min.css">
-	<!-- scripts -->
-	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			// on page load or when changing themes, best to add inline in `head` to avoid FOUC
-			if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-				document.body.classList.add('dark')
-			} else {
-				document.body.classList.remove('dark')
-			}
-		})
-	</script>
 </head>
 
 <body>
 	<!-- wrapper -->
-	<div class="wrapper">
+	<div class="wrapper" id="wrapper-theme">
 		<!-- header -->
 		<header class="header " id="header">
 			<div class="container">
@@ -112,8 +101,8 @@
 									<div class="container">
 										<div class="main__wrap-inner">
 											<div class="main__body">
-												<h3 class="main__title">Оператор безопасности выставок и конгрессной деятельности</h3>
-												<p class="main__description">ООО «РК Авангард» обеспечивает комплексный подход к организации и проведению конгрессно-выставочных мероприятий разного уровня и масштаба</p>
+												<h3 class="main__title">Мы аккредитовали всех на ВЭФ-2024</h3>
+												<p class="main__description">Ключевая международная площадка для создания и укрепления связей российского и мирового инвестиционного сообщества, всесторонней экспертной оценки экономического потенциала российского Дальнего Востока, представления его инвестиционных возможностей и условий ведения бизнеса на территориях опережающего развития.</p>
 												<a href="#" class="main__btn btn">Связаться с нами</a>
 											</div>
 										</div>

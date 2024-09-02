@@ -21,22 +21,11 @@
 	<!-- styles -->
 	<link rel="stylesheet" href="css/vendor.min.css">
 	<link rel="stylesheet" href="css/app.min.css">
-	<!-- scripts -->
-	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			// on page load or when changing themes, best to add inline in `head` to avoid FOUC
-			if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-				document.body.classList.add('dark')
-			} else {
-				document.body.classList.remove('dark')
-			}
-		})
-	</script>
 </head>
 
 <body>
 	<!-- wrapper -->
-	<div class="wrapper">
+	<div class="wrapper" id="wrapper-theme">
 		<!-- header -->
 		<header class="header header--inner" id="header">
 			<div class="container">
