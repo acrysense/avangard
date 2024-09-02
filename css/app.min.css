@@ -1859,6 +1859,9 @@ svg {
   -webkit-clip-path: none;
           clip-path: none;
 }
+.main__slider .main__bg::before {
+  display: none;
+}
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .main__slider .main__bg {
     -webkit-clip-path: none;
