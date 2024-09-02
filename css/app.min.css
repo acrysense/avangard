@@ -1154,7 +1154,7 @@ svg {
   width: fit-content;
 }
 
-.dark body {
+.dark {
   color: #FFFFFF;
   background: #181818;
 }
@@ -1246,6 +1246,10 @@ svg {
   .dark .feedback__wrapper {
     background: #3C3C3B;
   }
+}
+.dark .contacts__map .ymaps-2-1-79-ground-pane {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
 }
 .dark .footer {
   background: #181818;
