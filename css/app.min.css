@@ -2685,9 +2685,6 @@ svg {
   color: #3C3C3B;
   background: #FFFFFF;
 }
-.projects-card--white .projects-card__img {
-  opacity: 0.1;
-}
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .projects-card {
     padding: 42px 60px;
@@ -2891,7 +2888,7 @@ svg {
   display: block;
   width: 100%;
   height: 100%;
-  opacity: 0.3;
+  opacity: 0.8;
 }
 .projects-card__img img {
   display: block;
