@@ -1589,7 +1589,7 @@ svg {
 .content ul:not([class]) > li::before {
   content: "";
   position: absolute;
-  top: 5px;
+  top: 6px;
   left: 0;
   z-index: 1;
   display: block;
@@ -1602,7 +1602,7 @@ svg {
 .content ul:not([class]) > li:not(:last-child)::after {
   content: "";
   position: absolute;
-  top: 5px;
+  top: 6px;
   left: 9.5px;
   z-index: -1;
   display: block;
