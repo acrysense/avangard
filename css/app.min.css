@@ -1589,7 +1589,7 @@ svg {
 .content ul:not([class]) > li::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 0;
   z-index: 1;
   display: block;
@@ -1602,7 +1602,7 @@ svg {
 .content ul:not([class]) > li:not(:last-child)::after {
   content: "";
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 9.5px;
   z-index: -1;
   display: block;
@@ -1613,6 +1613,9 @@ svg {
 @media screen and (max-width: 767px) {
   .content ul:not([class]) > li {
     font-size: 14px;
+  }
+  .content ul:not([class]) > li::before {
+    top: 0;
   }
 }
 .content ul:not([class]) > li:not([class]) + li:not([class]) {
